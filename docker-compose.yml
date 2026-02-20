@@ -1,0 +1,26 @@
+services:
+  service-a:
+    build:
+      context: .
+      dockerfile: Dockerfile.service-a
+    ports:
+      - "8080:8080"
+    environment:
+      - SERVICE_B_URL=http://service-b:8081
+    depends_on:
+      service-b:
+        condition: service_healthy
+
+  service-b:
+    build:
+      context: .
+      dockerfile: Dockerfile.service-b
+    ports:
+      - "8081:8081"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:8081/api/v1/health"]
+      interval: 2s
+      timeout: 2s
+      retries: 5
+      start_period: 2s
+
