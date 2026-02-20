@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Text Analysis Microservices
 
 Два микросервиса для анализа текста.
@@ -197,3 +198,6 @@ text-analysis-test-task/
 - ✅ Логирование операций
 - ✅ Health check endpoints
 
+=======
+# text-analysis-test-task
+>>>>>>> ad67d66ddeb9f0ec5cbae21b1cea30df15ca7348
