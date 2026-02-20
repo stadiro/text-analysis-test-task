@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Text Analysis Microservices
 
 Два микросервиса для анализа текста.
